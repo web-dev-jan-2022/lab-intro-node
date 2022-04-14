@@ -44,9 +44,8 @@ class SortedList {
   }
 
   avg() {
-    // return this.items.sum() / this.lenght; this wouldn't work (of course not with the error case, but either for the number / length?):(
     if (this.length > 0) {
-      return this.items.reduce((a, b) => a + b) / this.length;
+      return this.sum() / this.length;
     } else {
       throw new Error("EmptySortedList");
     }
